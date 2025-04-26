@@ -10,5 +10,5 @@ COPY . /app/
 WORKDIR /app/
 RUN pip3 install --upgrade -r Installer
 
-#CMD ["python3", "modules/main.py"]
+#CMD ["python3", "main.py"]
 CMD gunicorn app:app & python3 main.py
